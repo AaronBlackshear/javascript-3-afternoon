@@ -76,12 +76,7 @@ class Manager{
   }
 
   fire(employee){
-    this.fired = [];
-    for(let i = 0; i < this.reports.length; i++){
-      if(this.reports[i] == employee){
-        this.fired.push(this.reports[i]);
-      }
-    }
+    this.reports.splice(employee,1);
     return this.reports;
   }
 
